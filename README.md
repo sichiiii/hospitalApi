@@ -1,24 +1,38 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. Backend
+    
+    1.1. Разработать RESTful API на Ruby on Rails (или любом другом ruby фреймворке). 
+    
+    1.2. Реализовать следующие модели: 
+    
+    - Пациент (ФИО, дата рождения, номер телефона, email) - ✓
+    
+    - Запрос на консультацию (пациент, текст запроса, дата создания) - ✓
+    
+    - Рекомендация (запрос на консультацию, текст рекомендации) - ✓
+    
+    1.3. Реализовать следующие endpoint’ы: 
+    - POST /consultation_requests - создание запроса на консультацию - ✓
+    
+    - POST /consultation_requests/:request_id/recommendations - создание рекомендации для конкретного запроса на консультацию - ✓
+    
+    - GET /patients/:patient_id/recommendations - получение списка рекомендаций для конкретного пациента - ✓
+    
+    1.4. Интегрировать внешний API для анализа медицинских данных (можно использовать фиктивный API, который возвращает моковые данные, к примеру OpenFDA). - ✓
+    
+    1.5. (Не обязательно) Реализовать механизм отправки уведомлений пациентам по email при получении новой рекомендации. - ✓
+    
+2. Database
+    
+    2.1. Использовать PostgreSQL. - ✓
+    
+    2.2. Продумать структуру базы данных и связи между таблицами. - ✓
+    
+3. Будет плюсом
+    
+    3.1. Использовать библиотеку dry-rb. -
+    
+    3.2. Покрыть код тестами. - ✓ +-
+    
+    3.3. Докер - ✓
